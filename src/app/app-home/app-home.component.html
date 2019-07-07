@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Striped Rows</h2>
+    <p>The .table-striped class adds zebra-stripes to a table:</p>   
+    
+    <!-- View Child use  -->
+      <span appBacon>sandwich!</span>
+    <!-- View Child use -->
+
+    <order-list [peopleData]="listObj"></order-list>    
+    <app-order-details (peopleDetails)="listDetails($event)"></app-order-details>
+
+
+      <button class="btn btn-warning" (click)="showDetails()">Show Details </button>
+
+      <div class="row" *ngIf="detailsHeading">
+        <div class="col-md-12" *ngFor="let list of listDetailsObj">
+          <h2> {{ list.title }}  </h2>
+          <p> {{ list.detail }}  </p>
+        </div>
+      </div>
+
+
+</div>
+
